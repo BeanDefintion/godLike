@@ -1,0 +1,32 @@
+server:
+  port: 8147
+spring:
+  application:
+    name: god_base
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tensquare_base?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
+    username: root
+    password: 123456
+  jpa:
+    database: MySQL
+    show-sql: true
+    generate-ddl: true
+
+swagger:
+  enabled: true
+  title: 你是🐶吗
+  description: 狗代码
+  version: 1.4.0.RELEASE
+  base-path: /**
+  ui-config:
+    json-editor: false
+    show-request-headers: true
+    request-timeout: 5000
+    submit-methods: get,delete
+  exclude-path: /error,/ops/**
+  license: Apache License, Version 2.0
+  license-url: https://www.apache.org/licenses/LICENSE-2.0.html
+  base-package: com.god.controller
+
+

@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "返回值模型")
-public class Result {
+public class Result<T> {
 
     @ApiModelProperty(value = "标志")
     private boolean flag;
@@ -17,10 +17,10 @@ public class Result {
     @ApiModelProperty(value = "标志码", example = "40001")
     private Integer code;
 
-    @ApiModelProperty(value = "mesage")
+    @ApiModelProperty(value = "消息")
     private String message;
 
-    @ApiModelProperty(value = "信息")
+    @ApiModelProperty(value = "封装的数据")
     private Object data;
 
     public Result(boolean flag, Integer code, String message) {
